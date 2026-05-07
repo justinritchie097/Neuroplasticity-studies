@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neuroplasticity & The Changing Brain</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0b0f14;
+        color: #e6e6e6;
+        line-height: 1.6;
+      }
+
+      header {
+        padding: 60px 20px;
+        text-align: center;
+        background: linear-gradient(135deg, #1b2a41, #0b0f14);
+      }
+
+      header h1 {
+        font-size: 2.8rem;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        color: #b0c4de;
+        max-width: 800px;
+        margin: auto;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: auto;
+        padding: 30px;
+      }
+
+      .card {
+        background: #121a24;
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #223044;
+      }
+
+      h2 {
+        color: #7fb3ff;
+      }
+
+      button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 8px;
+        background: #7fb3ff;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .fact {
+        margin-top: 10px;
+        padding: 10px;
+        background: #0f1622;
+        border-left: 3px solid #7fb3ff;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        color: #888;
+      }
+      .button-grid {
+        display: grid;
+        gap: 12px;
+        margin-top: 15px;
+      }
+
+      .study-btn {
+        display: block;
+        padding: 14px 16px;
+        border-radius: 12px;
+
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        color: white;
+        text-decoration: none;
+
+        font-weight: bold;
+        transition: all 0.25s ease;
+
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .study-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        background: linear-gradient(135deg, #2a5298, #4a7bd0);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Neuroplasticity</h1>
+      <p>
+        The brain’s ability to reorganize itself by forming new neural
+        connections throughout life.
+      </p>
+    </header>
+
+    <div class="container">
+      <div class="card">
+        <h2>What is Neuroplasticity?</h2>
+        <p>
+          Neuroplasticity is the brain’s ability to change its structure and
+          function in response to experience, learning, and injury. This
+          challenges the old belief that the brain is fixed after childhood.
+        </p>
+        <div class="card">
+          <h2>Scientific Evidence (Peer-Reviewed Studies)</h2>
+
+          <p>
+            Click the buttons below to read real neuroscience research
+            supporting neuroplasticity.
+          </p>
+
+          <div class="button-grid">
+            <a
+              class="study-btn"
+              href="https://www.pnas.org/doi/10.1073/pnas.070039597"
+              target="_blank"
+            >
+              🧠 London Taxi Drivers Study (Hippocampus Growth)
+            </a>
+
+            <a
+              class="study-btn"
+              href="https://www.sciencedirect.com/science/article/abs/pii/S1053811909000044"
+              target="_blank"
+            >
+              🧘 Meditation & Brain Structure Changes
+            </a>
+
+            <a
+              class="study-btn"
+              href="https://www.nature.com/articles/s41598-017-07764-x"
+              target="_blank"
+            >
+              🧬 MRI Evidence of Gray Matter Increase
+            </a>
+          </div>
+        </div>
+       
+
+      <div class="card">
+        <h2>Interactive Insight</h2>
+        <p>Click to see how everyday actions affect neuroplasticity:</p>
+
+        <button onclick="randomFact()">Generate Brain Change Fact</button>
+
+        <div id="factBox" class="fact"></div>
+      </div>
+    </div>
+
+    <footer>
+      Built to demonstrate scientific evidence of brain adaptability
+      (neuroplasticity).
+    </footer>
+
+    <script>
+      function toggle(id) {
+        const el = document.getElementById(id);
+        el.classList.toggle("hidden");
+      }
+
+      const facts = [
+        "Learning a new skill strengthens synaptic connections in the brain.",
+        "Repetition increases myelination, making neural signals faster.",
+        "Meditation has been shown to increase gray matter in the prefrontal cortex.",
+        "Physical exercise boosts neurogenesis in the hippocampus.",
+        "The brain can rewire after injury by recruiting alternative pathways.",
+      ];
+
+      function randomFact() {
+        const box = document.getElementById("factBox");
+        const random = facts[Math.floor(Math.random() * facts.length)];
+        box.textContent = random;
+      }
+    </script>
+  </body>
+</html>
